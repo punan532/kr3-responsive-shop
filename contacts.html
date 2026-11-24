@@ -1,60 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Контактная информация учебного интернет-магазина.">
-  <title>PunanovStore</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <div class="site-header">
-      <img class="site-logo" src="images/logo.png" alt="PunanovStore" href="index.html">
-
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-          <li><a href="index.html#advantages">Преимущества</a></li>
-          <li><a href="index.html#popular">Популярные товары</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a href="index.html">Главная</a>
-      <span>Контакты</span>
-    </nav>
-
-    <section class="section">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты · PunanovStore</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К содержимому</a>
+    <header>
+      <div class="site-header">
+        <a href="index.html" aria-label="PunanovStore — главная"><img class="site-logo" src="images/logo.png" alt="PunanovStore" width="1310" height="224"></a>
+        <button class="menu-toggle secondary" type="button" aria-controls="navigation" aria-expanded="false" hidden>Меню</button>
+        <nav id="navigation" class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="order.html">Заявка</a></li>
+            <li><a href="contacts.html" aria-current="page">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a> / Контакты</nav>
       <h1>Контакты</h1>
-      <p>
-        Здесь размещается контактная информация учебного интернет-магазина.
-      </p>
+      <div class="contact-layout">
+        <section><h2>Учебный магазин</h2><address>г. Москва<br><a href="tel:+79000000000">+7 (900) 000-00-00</a><br><a href="mailto:info@example.com">info@example.com</a></address></section>
+        <section id="feedback"><h2>Обратная связь</h2><form class="order-form" data-demo-form>
+          <div class="form-field"><label for="email">Электронная почта</label><input type="email" autocomplete="email" id="email" name="email" required></div>
+          <div class="form-field"><label for="message">Сообщение</label><textarea id="message" name="message" rows="4" required></textarea></div>
+          <button class="button" type="submit">Подготовить сообщение</button>
+        </form><p role="status" data-form-status></p></section>
+      </div>
+    </main>
+    <footer><div>© 2026 PunanovStore · Учебный магазин</div></footer>
 
-      <ul>
-        <li>Телефон: +7 (900) 000-00-00</li>
-        <li>E-mail: info@example.com</li>
-        <li>Адрес: г. Москва, учебный проект</li>
-      </ul>
-    </section>
-
-    <section class="section" id="feedback">
-      <h2>Обратная связь</h2>
-      <p>
-        Для отправки заявки используйте форму в модальном окне на главной странице.
-      </p>
-      <a class="button" href="index.html#contacts">Перейти к форме</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Учебный проект.</p>
-    <p>Пунанов</p>
-  </footer>
-</body>
+  </body>
 </html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заявки · PunanovStore</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К содержимому</a>
+    <header>
+      <div class="site-header">
+        <a href="index.html" aria-label="PunanovStore — главная"><img class="site-logo" src="images/logo.png" alt="PunanovStore" width="1310" height="224"></a>
+        <button class="menu-toggle secondary" type="button" aria-controls="navigation" aria-expanded="false" hidden>Меню</button>
+        <nav id="navigation" class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="order.html" aria-current="page">Заявка</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a> / Оформление заявки</nav>
+      <h1>Оформление заявки</h1><p>Укажите товар и контакты для связи. Заявка учебная.</p>
+      <form class="order-form" data-demo-form>
+        <div class="form-field"><label for="item">Товар</label>
+        <select name="item" id="item"><option value="1">Бутерброд</option><option value="2">Бычок-осеменитель</option><option value="3">Водка «Пять озёр»</option></select></div>
+        <div class="form-field"><label for="name">Имя</label>
+        <input id="name" name="name" required minlength="2" autocomplete="given-name"></div>
+        <div class="form-field"><label for="email">Электронная почта</label>
+        <input id="email" name="email" type="email" required autocomplete="email"></div>
+        <div class="form-field"><label for="phone">Телефон</label>
+        <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="+7 (999) 123-45-67"></div>
+        <div class="form-field"><label for="date">Дата для связи (по желанию)</label>
+        <input id="date" name="date" type="date"></div>
+        <div class="form-field"><label for="comment">Комментарий (по желанию)</label>
+        <textarea id="comment" name="comment" rows="3"></textarea></div>
+        <label class="wide"><input type="checkbox" required name="agree"> Согласен на обработку персональных данных</label>
+        <div class="actions"><button class="button" type="submit">Подготовить заявку</button></div>
+      </form>
+      <p role="status" data-form-status></p>
+    </main>
+    <footer><div>© 2026 PunanovStore · Учебный магазин</div></footer>
+
+  </body>
+</html>

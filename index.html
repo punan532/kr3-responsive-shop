@@ -1,198 +1,101 @@
 <!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PunanovStore</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/main.js" defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная · PunanovStore</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script defer src="js/main.js"></script>
   </head>
   <body>
-    <header class>
+    <a class="skip-link" href="#main">К содержимому</a>
+    <header>
       <div class="site-header">
-        <img class="site-logo" src="images/logo.png" alt="PunanovStore" href="index.html">
-        <nav class="site-nav" aria-label="Основная навигация">
+        <a href="index.html" aria-label="PunanovStore — главная"><img class="site-logo" src="images/logo.png" alt="PunanovStore" width="1310" height="224"></a>
+        <button class="menu-toggle secondary" type="button" aria-controls="navigation" aria-expanded="false" hidden>Меню</button>
+        <nav id="navigation" class="site-nav" aria-label="Основная навигация">
           <ul class="site-nav__list">
-            <li><a href="index.html">Главная</a></li>
+            <li><a href="index.html" aria-current="page">Главная</a></li>
             <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="order.html">Заявка</a></li>
             <li><a href="contacts.html">Контакты</a></li>
-            <li><a href="#popular">Популярные товары</a></li>
-            <li><a href="#advantages">Преимущества</a></li>
           </ul>
         </nav>
       </div>
     </header>
-
-    <main>
+    <main id="main" tabindex="-1">
       <section class="hero">
-        <h2>Главная страница проекта</h2>
-        <p>
-          Это стартовая страница учебного frontend-проекта. В дальнейшем здесь
-          будет разработан многостраничный сайт интернет-магазина или каталога
-          услуг.
-        </p>
-        <a class="button" href="catalog.html">Перейти к каталогу</a>
+        <div><h1>Магазин Пунанова</h1>
+          <p>Продукты, напитки и товары для фермерского хозяйства.</p>
+          <a class="button" href="catalog.html">Перейти в каталог</a></div>
+        <div class="product-card__image-container"><picture>
+        <source type="image/webp" srcset="images/product1-320.webp 320w, images/product1-600.webp 600w" sizes="(min-width: 40rem) 360px, 80vw">
+        <img class="product-card__image" src="images/product1.png" alt="Треугольный бутерброд с ветчиной и сыром" loading="eager">
+      </picture></div>
       </section>
-
-      <section class="section" id="advantages">
-        <h2>Преимущества проекта</h2>
-
-        <ul class="advantages-list">
-          <li>Понятная структура</li>
-          <li>Семантические блоки страницы</li>
-          <li>Подключение внешнего css-файла</li>
-          <li>Подготовка к разработке многостраничного сайта</li>
-        </ul>
+      <section id="popular"><h2>Популярные товары</h2>
+        <div class="products-grid">
+          <article class="product-card" data-category="Еда">
+            <div class="product-card__image-container"><picture>
+            <source type="image/webp" srcset="images/product1-320.webp 320w, images/product1-600.webp 600w" sizes="(min-width: 64rem) 340px, (min-width: 40rem) 45vw, 90vw">
+            <img class="product-card__image" src="images/product1.png" alt="Треугольный бутерброд с ветчиной и сыром" loading="lazy">
+          </picture></div>
+            <span class="category">Еда</span>
+            <h3><a href="product.html#item-1">Бутерброд</a></h3>
+            <p>Сэндвич с ветчиной и сыром на мягком белом хлебе.</p>
+            <strong class="price">121 ₽</strong>
+            <button type="button" class="button secondary" data-product="Бутерброд">Быстрый заказ</button>
+          </article>
+          <article class="product-card" data-category="Хозяйство">
+            <div class="product-card__image-container"><picture>
+            <source type="image/webp" srcset="images/product2-320.webp 320w, images/product2-600.webp 600w" sizes="(min-width: 64rem) 340px, (min-width: 40rem) 45vw, 90vw">
+            <img class="product-card__image" src="images/product2.png" alt="Чёрный племенной бык" loading="lazy">
+          </picture></div>
+            <span class="category">Хозяйство</span>
+            <h3><a href="product.html#item-2">Бычок-осеменитель</a></h3>
+            <p>Племенной чёрный бык крепкого телосложения для фермерского хозяйства.</p>
+            <strong class="price">150 000 ₽</strong>
+            <button type="button" class="button secondary" data-product="Бычок-осеменитель">Быстрый заказ</button>
+          </article>
+          <article class="product-card" data-category="Напитки">
+            <div class="product-card__image-container"><picture>
+            <source type="image/webp" srcset="images/product3-320.webp 320w, images/product3-600.webp 600w" sizes="(min-width: 64rem) 340px, (min-width: 40rem) 45vw, 90vw">
+            <img class="product-card__image" src="images/product3.png" alt="Бутылка водки «Пять озёр»" loading="lazy">
+          </picture></div>
+            <span class="category">Напитки</span>
+            <h3><a href="product.html#item-3">Водка «Пять озёр»</a></h3>
+            <p>Водка «Пять озёр» в классической стеклянной бутылке.</p>
+            <strong class="price">548 ₽</strong>
+            <button type="button" class="button secondary" data-product="Водка «Пять озёр»">Быстрый заказ</button>
+          </article>
+        </div>
       </section>
-
-<section class="section" id="popular">
-  <h2>Популярные товары</h2>
-
-  <div class="products-grid">
-    <article class="product-card">
-      <div class="product-card__image-container">
-        <img class="product-card__image" src="images/product1.png" alt="Товар 1">
-      </div>
-      <h3>Бутерброд</h3>
-      <p>Сэндвич с ветчиной и сыром на мягком белом хлебе. Быстрый перекус на каждый день.</p>
-      <h4>121 руб.</h4>
-      <button class="button product-card__button" type="button" data-product="Товар 1">
-        Заказать
-      </button>
-    </article>
-
-    <article class="product-card">
-      <div class="product-card__image-container">
-        <img class="product-card__image" src="images/product2.png" alt="Товар 2">
-      </div>
-      <h3>Бычок-осеменитель</h3>
-      <p>Племенной чёрный бык крепкого телосложения. Спокойный нрав, подходит для фермерского хозяйства.</p>
-      <h4>150 000 руб.</h4>
-      <button class="button product-card__button" type="button" data-product="Товар 2">
-        Заказать
-      </button>
-    </article>
-
-    <article class="product-card">
-      <div class="product-card__image-container">
-        <img class="product-card__image" src="images/product3.png" alt="Товар 3">
-      </div>
-      <h3>Водка "Пять Озёр"</h3>
-      <p>Водка «Пять озёр» в классической стеклянной бутылке. Мягкий вкус, подходит для праздничного стола.</p>
-      <h4>548 руб.</h4>
-      <button class="button product-card__button" type="button" data-product="Товар 3">
-        Заказать
-      </button>
-    </article>
-  </div>
-</section>
-
-
-      <aside class="aside-info">
-        <h2>Информация для студентов</h2>
-        <p>
-          Это дополнительная информация, которая может быть полезна для
-          студентов.
-        </p>
-      </aside>
+      <section id="advantages"><h2>Преимущества</h2>
+        <ul class="advantages-list"><li>Цены указаны за единицу товара</li><li>Характеристики доступны до заказа</li><li>Можно выбрать дату для связи</li></ul>
+      </section>
+      <p role="status" id="quick-status"></p>
     </main>
-
-    <footer id="contacts">
-      <p>&copy; 2026 Учебный проект</p>
-      <p>Пунанов</p>
-    </footer>
-
-    <dialog
-      class="order-dialog"
-      id="order-dialog"
-      aria-labelledby="order-dialog-title"
-    >
-    <h2 id = "order-dialog-title">Оформление заявки</h2>
-    <form class = "order-form" id = "order-form" action = "#" method = "post" novalidate>
-        <input id = "selected-product" name = "selected-product" type = "hidden">
-
-        <div class = "form-field">
-            <label for = "order-name">Имя</label>
-            <input
-                id = "order-name"
-                name = "name"
-                type = "text"
-                placeholder = "Введите ваше имя"
-                minlength = "2"
-                autocomplete = "given-name"
-                required
-            >
-        </div>
-
-        <div class = "form-field">
-            <label for = "order-email">Email</label>
-            <input
-                id = "order-email"
-                name = "email"
-                type = "email"
-                placeholder = "email@gmail.com"
-                autocomplete = "email"
-                required
-                >
-        </div>
-
-        <div class = "form-field">
-            <label for = "order-phone">Номер телефона</label>
-            <input
-                id = "order-phone"
-                name = "phone"
-                type = "tel"
-                inputmode = "tel"
-                placeholder = "+7 (999) 999-99-99"
-                pattern = "\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}"
-                autocomplete = "tel"
-                required
-            >
-            <small>Формат: +7 (999) 999-99-99</small>
-        </div>
-
-        <div class = "form-field">
-          <label for = "order-date">Дата для связи</label>
-          <input
-                id = "order-date"
-                name = "date"
-                type = "date"
-                min = "2026-01-01"
-                max = "2026-12-31"
-        </div>
-
-        <div class = "form-field">
-          <label for = "order-comment">Комментарий</label>
-          <textarea
-            id = "order-comment"
-            name = "comment"
-            rows = "4"
-            placeholder = "Введите комментарий"
-          ></textarea>
-        </div>
-
-        <div class = "form-field__checkbox">
-          <label for = "order-agree">
-            <input
-              id = "order-agree"
-              name = "agree"
-              type = "checkbox"
-              required
-            >
-            Я согласен на обработку персональных данных
-          </label>
-        </div>
-
-        <div class = "form-field__buttons">
-          <button type = "button" id = "close-dialog">Закрыть</button>
-          <button type = "submit">Отправить</button>
-        </div>
-    </form>
+    <footer><div>© 2026 PunanovStore · Учебный магазин</div></footer>
+    <dialog class="order-dialog" aria-labelledby="quick-title">
+      <h2 id="quick-title">Быстрый заказ</h2>
+      <form class="order-form" data-demo-form>
+        <div class="form-field"><label for="quick-item">Товар</label>
+        <select name="item" id="quick-item"><option value="1">Бутерброд</option><option value="2">Бычок-осеменитель</option><option value="3">Водка «Пять озёр»</option></select></div>
+        <div class="form-field"><label for="quick-name">Имя</label>
+        <input id="quick-name" name="name" required minlength="2" autocomplete="given-name"></div>
+        <div class="form-field"><label for="quick-email">Электронная почта</label>
+        <input id="quick-email" name="email" type="email" required autocomplete="email"></div>
+        <div class="form-field"><label for="quick-phone">Телефон</label>
+        <input id="quick-phone" name="phone" type="tel" required autocomplete="tel" placeholder="+7 (999) 123-45-67"></div>
+        <div class="form-field"><label for="quick-date">Дата для связи (по желанию)</label>
+        <input id="quick-date" name="date" type="date"></div>
+        <div class="form-field"><label for="quick-comment">Комментарий (по желанию)</label>
+        <textarea id="quick-comment" name="comment" rows="3"></textarea></div>
+        <label class="wide"><input type="checkbox" required name="agree"> Согласен на обработку персональных данных</label>
+        <div class="actions"><button class="button" type="submit">Подготовить заявку</button> <button type="button" class="secondary" data-close>Закрыть</button></div>
+      </form>
     </dialog>
-
-    <p class = "success-message" id = "success-message" hidden>
-      Заявка успешно отправлена!
-    </p>
-
   </body>
 </html>
